@@ -58,9 +58,11 @@ class FunctionalTests(unittest.TestCase):
             is_books_count_three = len(books) == 3
 
             result = is_status_ok and is_books_list and is_books_count_three
+            self.test_obj.yakshaAssert("TestBooksCountIsThree", result, "functional")
             print("TestBooksCountIsThree = Passed" if result else "TestBooksCountIsThree = Failed")
 
         except Exception as e:
+            self.test_obj.yakshaAssert("TestBooksCountIsThree", False, "functional")
             print(f"TestBooksCountIsThree = Failed | Exception: {e}")
 
 
