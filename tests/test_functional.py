@@ -46,10 +46,6 @@ class FunctionalTests(unittest.TestCase):
             self.test_obj.yakshaAssert("TestGetBooksHasBooks", False, "functional")
             print(f"TestGetBooksHasBooks = Failed | Exception: {e}")
 
-    import requests
-
-    import requests
-
     def test_books_count_is_three(self):
         try:
             # Call the GET /books endpoint
